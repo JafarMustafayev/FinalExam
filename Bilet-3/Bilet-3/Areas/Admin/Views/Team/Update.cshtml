@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using Bilet_3.Models;
+
+@model Team
+
+<div class=" mx-3">
+    <form method="post" asp-action="Update">
+        <div class="mb-3">
+            <label asp-for=FUllName class="form-label"></label>
+            <input asp-for="FUllName" class="form-control">
+            <span class=" text-danger" asp-validation-for="FUllName"></span>
+        </div>
+
+        <div class="mb-3">
+            <select class="form-select" asp-items="@(new SelectList(ViewBag.Position,"Id","Name"))">
+            </select>
+            <span class=" text-danger" asp-validation-for="PositionId"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for=Instagram class="form-label">Instagram</label>
+            <input asp-for="Instagram" class="form-control">
+            <span class=" text-danger" asp-validation-for="Instagram"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for=Twitter class="form-label">Twitter</label>
+            <input asp-for="Twitter" class="form-control">
+            <span class=" text-danger" asp-validation-for="Twitter"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for=Linkedin class="form-label">Linkedin</label>
+            <input asp-for="Linkedin" class="form-control">
+            <span class=" text-danger" asp-validation-for="Linkedin"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for=Facebook class="form-label">Facebook</label>
+            <input asp-for="Facebook" class="form-control">
+            <span class=" text-danger" asp-validation-for="Facebook"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

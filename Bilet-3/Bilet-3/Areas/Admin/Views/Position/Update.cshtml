@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using Bilet_3.Models;
+@model Position
+
+<div class=" mx-3">
+    <form method="post" asp-action="Update">
+        <div class="row">
+            <div class="mb-3 col-5" style="display:flex; align-content:center">
+                <label asp-for="Name" class="form-label">Position Name</label>
+                <input class="form-control" asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger "></span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
